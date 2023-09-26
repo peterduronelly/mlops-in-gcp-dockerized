@@ -1,0 +1,3 @@
+pandas
+google-cloud-bigquery
+pmdarima==2.0.3
