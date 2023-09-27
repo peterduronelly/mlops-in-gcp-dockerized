@@ -13,7 +13,8 @@ q = """
 SELECT * FROM st-data-project.fx_data.eurusd_hourly
 """
 
-df_fx = bq.query(q).to_dataframe()
+result = bq.query(q)
+df_fx = result.to_dataframe()
 df_fx.sort_values(by = 'ts', inplace = True)
 
 ## BUILD MODEL
