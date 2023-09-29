@@ -1,4 +1,4 @@
-# Run your code by using simply using Docker
+# Run your code by simply using Docker
 
 It is possible to build your image locally and run your code using docker commands from Cloud Shell. There are two problems with this approach:
 1. Auto-authentication will not work.
@@ -22,14 +22,16 @@ bq = bigquery.Client(credentials=credentials, project=credentials.project_id,)
 
 `Artifact Registry` is the repository for various artifacts *and* containers (replacing Container Registry). The best way to place your container is to build it using `Cloud Build`. 
 
-`gcloud builds submit --tag gcr.io/${GOOGLE_CLOUD_PROJECT}/quickstart-image .`
+`gcloud builds submit --tag gcr.io/${GOOGLE_CLOUD_PROJECT}/forecast-image .`
 
 Make sure you include the last dot at the end of the command! 
+
+Artifact Registry stores all your builds, so if you are rebuilding your image the previous versions will all be available (in case you mess up something in the new version.)
 
 
 ### Build and run your container locally
 
-If, however, you are kust setting up a transitory container, you can so by running
+If, however, you are just setting up a transitory container, you can do so by running
 `docker image build -t forecast:0.1 .`
 
 '*forecast:01*' is the name of the container image, and watch for the dot at the end of the command again. 
