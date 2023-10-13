@@ -31,13 +31,13 @@ Artifact Registry stores all your builds, so if you are rebuilding your image th
 
 ### Build and run your container locally
 
-If, however, you are just setting up a transitory container, you can do so by running
+If, however, you are just setting up a transitory container, you can do so by running   
 `docker image build -t forecast:0.1 .`
 
 '*forecast:01*' is the name of the container image, and watch for the dot at the end of the command again. 
 
-To run your container type
+To run your container type   
 `docker run forecast:0.1`. 
 
-Existing images can be listed using
+Existing images can be listed using   
 `docker images`
